@@ -975,7 +975,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9811321, g: 0.6467896, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1062,8 +1062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64ecbfb5aafd4c4e91e781725862759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 1
-  pickupSound: {fileID: 8300000, guid: 7f3c747fcb021314dba5cc65a09baa79, type: 3}
+  Coins: 0
+  PointText: {fileID: 0}
 --- !u!212 &1854225743
 SpriteRenderer:
   m_ObjectHideFlags: 0
