@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Button_Script : MonoBehaviour
 {
     public string gleerupsUrl = "https://gleerupsportal.se/laromedel/0-teknik-1/article/e27fe4d5-f527-407e-8d3d-c3e405c161e2?page=1";
+
+    public string youtubeUrl = "https://youtu.be/dQw4w9WgXcQ";
     public void LoadMainGame()
     {
         SceneManager.LoadScene("Game");
@@ -35,6 +37,11 @@ public class Button_Script : MonoBehaviour
         Application.OpenURL(gleerupsUrl);
     }
     
+    public void RickRoll()
+    {
+        Application.OpenURL(youtubeUrl);
+    }
+
         // Update is called once per frame
     void Update()
     {

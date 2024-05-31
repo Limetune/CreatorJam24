@@ -1,29 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinPickup : MonoBehaviour
 {
-    public int coinValue = 1; // Amount of coins this object represents
-    public AudioClip pickupSound; // Optional: sound to play on pickup
-
-    void OnTriggerEnter(Collider other)
+    public int Coins = 0;
+    public TextMeshProUGUI PointText;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == "Coin")
         {
-            // Add coin value to the player's score
-            PlayerScore playerScore = other.GetComponent<PlayerScore>();
-            if (playerScore != null)
-            {
-                playerScore.AddCoins(coinValue);
-            }
 
-            // Play pickup sound if it exists
-            if (pickupSound != null)
-            {
-                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
-            }
-
-            // Destroy the coin object
-            Destroy(gameObject);
+            Coins++;
+            Debug.Log("Coins" + Coins);
+            Destroy(collision.gameObject);
         }
+
+    }
+    private void Update()
+    {
+        PointText.text = "Points: " + Coins;
     }
 }
