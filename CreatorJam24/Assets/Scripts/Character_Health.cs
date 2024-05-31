@@ -27,14 +27,14 @@ public class Character_Health : MonoBehaviour
     {
         HealthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 
-        if (health > maxHealth * 0.75f)
+        if (health > maxHealth * 0.7f)
         {
             spriteRenderer.sprite = MaxHealth;
         }
-        if (health > maxHealth * 0.5f)
-        {
-            spriteRenderer.sprite = HalfHealth;
-        }
+        else if (health > maxHealth * 0.4f)
+             {
+                 spriteRenderer.sprite = HalfHealth;
+             }
         else
         {
             spriteRenderer.sprite = LowHealth;
