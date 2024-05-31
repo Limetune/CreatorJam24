@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coins: 0
-  PointText: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 7f3c747fcb021314dba5cc65a09baa79, type: 3}
 --- !u!212 &1854225743
 SpriteRenderer:
   m_ObjectHideFlags: 0
