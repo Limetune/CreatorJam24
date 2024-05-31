@@ -11,15 +11,10 @@ public class CoinPickup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Coin")
         {
-
             Coins++;
             Debug.Log("Coins" + Coins);
             Destroy(collision.gameObject);
         }
 
-    }
-    private void Update()
-    {
-        PointText.text = "Points: " + Coins;
     }
 }
