@@ -23,9 +23,13 @@ public class Button_Script : MonoBehaviour
 
     public void Open_Main_Menu()
     {
-        SceneManager.LoadScene("UBS_Main_Menu");
+        SceneManager.LoadScene("Main_menu");
     }
 
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     public void gleerups()
     {
         Application.OpenURL(gleerupsUrl);
