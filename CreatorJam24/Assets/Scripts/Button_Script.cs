@@ -17,7 +17,7 @@ public class Button_Script : MonoBehaviour
 
     public void OpenSettings()
     {
-        SceneManager.LoadScene("UBS_Settings");
+        SceneManager.LoadScene("Settings");
     }
 
     public void Open_Main_Menu()
