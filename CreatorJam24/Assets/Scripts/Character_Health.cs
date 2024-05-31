@@ -8,15 +8,37 @@ public class Character_Health : MonoBehaviour
     public float health;
     public float maxHealth;
     public Image HealthBar;
+
+    public Sprite MaxHealth;
+    public Sprite HalfHealth;
+    public Sprite LowHealth;
+
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         HealthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+
+        if (health > maxHealth * 0.75f)
+        {
+            spriteRenderer.sprite = MaxHealth;
+        }
+        if (health > maxHealth * 0.5f)
+        {
+            spriteRenderer.sprite = HalfHealth;
+        }
+        else
+        {
+            spriteRenderer.sprite = LowHealth;
+        }
     }
 }
+
