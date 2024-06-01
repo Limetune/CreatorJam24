@@ -12,6 +12,11 @@ public class Button_Script : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void PreGame()
+    {
+        SceneManager.LoadScene("Pre_Game");
+    }
     
     public void CloseGame()
     {
