@@ -6,6 +6,7 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
     public CoinManagment cm;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Coin")
@@ -13,6 +14,8 @@ public class Collision : MonoBehaviour
             cm.coinCount++;
             Destroy(collision.gameObject);
         }
+
+        
     }
     // Start is called before the first frame update
     void Start()

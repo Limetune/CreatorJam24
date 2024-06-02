@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 public class Ai : MonoBehaviour
 {
@@ -9,6 +8,7 @@ public class Ai : MonoBehaviour
     public float distanceBetween;
 
     private float distance;
+
 
     private void Start()
     {
@@ -28,8 +28,11 @@ public class Ai : MonoBehaviour
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
 
+
     }
 
 
-
 }
+
+
+
