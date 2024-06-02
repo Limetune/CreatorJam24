@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319aa5c14d2ead846be7fd30a5e00491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   maxHealth: 5
   HealthBar: {fileID: 943191473}
   MaxHealth: {fileID: -827115813, guid: 041f17ef275a77a4fa95bf8e5805b393, type: 3}
@@ -35963,6 +35963,7 @@ GameObject:
   - component: {fileID: 1745191254}
   - component: {fileID: 1745191253}
   - component: {fileID: 1745191252}
+  - component: {fileID: 1745191255}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -36044,6 +36045,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1745191255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745191251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dac9c3690d1344aaa19a915861f74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followspeed: 2
+  target: {fileID: 826104286}
 --- !u!1 &1903720427
 GameObject:
   m_ObjectHideFlags: 0
