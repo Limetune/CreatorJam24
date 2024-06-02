@@ -14,6 +14,7 @@ public class Character_Health : MonoBehaviour
     public Sprite LowHealth;
 
     private SpriteRenderer spriteRenderer;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,12 @@ public class Character_Health : MonoBehaviour
         else
         {
             spriteRenderer.sprite = LowHealth;
+        }
+        if (health <= 0 && !isDead)
+        {
+            isDead = true;
+            Destroy(gameObject);
+            Debug.Log("Dead");
         }
     }
 }
