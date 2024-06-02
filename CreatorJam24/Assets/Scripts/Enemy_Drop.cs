@@ -1,20 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Enemy_Drop : MonoBehaviour
 {
-    public float health;
+    public float enemy_Health;
     public GameObject moneyPrefab; // Referens till pengar-prefaben
-    private int moneyDropAmount = 1; 
+    private int moneyDropAmount = 1;
+    public float bullet_Damage;
 
-    // Funktion för att ta skada
-    public void TakeDamage(float damage)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        health -= damage;
-        if (health <= 0)
+        if (collision.gameObject.tag == "Bullet")
         {
-            Die();
+            enemy_Health -= bullet_Damage;
+            Destroy(collision.gameObject);
+            
+            if (enemy_Health <= 0)
+            {
+                Die();
+            }
         }
     }
 
